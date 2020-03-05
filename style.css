@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #FAD961;
+    background-image: linear-gradient(90deg, #FAD961 0%, #F76B1C 100%);
+    
+}
+
+.container {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+    height: 550px;
+    margin: 20px auto;
+}
+
+.calculator{
+    width: 320px;
+    height: 520px;
+    background-color: rgb(255, 250, 242);
+    position: relative; 
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+}
+
+.result{
+    height: 120px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.previous-operand{
+    position: relative;
+    text-align: right;
+    height: 20px;
+    margin: 0 20px;
+    padding-top: 20px;
+    font-size: 15px;
+    color: #aaaaaa;
+}
+
+.current-operand{
+    position: relative;
+    text-align: right;
+    height: 20px;
+    margin: 0 20px;
+    padding-top: 20px;
+    font-size: 30px;
+    color: #ffff;
+}
+
+.output{
+    text-align: right;
+    font-size: 35px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.operator{
+    background-color: #F76B1C;
+}
+.empty{
+    background-color: #ffff;
+}
+
+.keyboard{
+    height: 400px;
+}
+
+.number:hover{
+    background-color: rgba(0,0,0,0.3);
+}
+.operator:hover{
+    background-color: rgba(247, 109, 29, 0.5);
+}
+
+.operator, .number, .empty{
+    width: 50px;
+    height: 50px;
+    margin: 15px;
+    float: left;
+    border-radius: 50%;
+    border-width: 0;
+    font-weight: bold;
+    font-size: 15px;
+} 
+
+.operator, .number{
+    cursor: pointer;
+}
+
+.operator:active, .number:active{
+    font-size: 12px;
+}
+
+.operator:focus, .number:focus, .empty:focus{
+    outline: 0;
+}
+footer{
+    text-align: center;
+    color: #ffff;
+    font-weight: 300;
+}
+.lien {
+    color: #fff; 
+    text-decoration: none;
+    font-weight: 700;
+}
+.lien:hover{
+    text-decoration: underline;
+    
+    text-shadow: 1px 1px #F76B1C;
+}
+.lien:visited{
+    color: #FAD961 !important;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 100%;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 340px) {
+    .calculator{
+        width: 300px;
+    }
+    .keyboard {
+        padding: 10px;
+    }
+    .operator, .number, .empty {
+        margin: 10px;
+    }
+}
